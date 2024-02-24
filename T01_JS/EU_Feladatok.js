@@ -128,13 +128,29 @@ console.log("Az EU-nak jelenleg ennyi tagja van: "+EuTagok(EuropaiUnio));
 function EuCsat(vizsgaltTomb){
 	let csatlakozas=0;
     for(let i=0;i<vizsgaltTomb.length;i++){
-    	if(vizsgaltTomb[i].csatlakozas=="2007.01.01"){
+    	if(vizsgaltTomb[i].csatlakozas=="2007.01.01"){   //csatlakozas.substr(0,4) == "2007"  is megoldás//
         csatlakozas++;
     }
     }
     return csatlakozas;
 }
 console.log("2007-ben ennyi ország csatlakozott az EU-hoz: "+EuCsat(EuropaiUnio));
+
+
+//2. Feladat ( adv )
+
+function EuCsatAdv(vizsgaltTomb,adottEv){
+	let adottcsatlakozas=0;
+	for (let i=0;i<vizsgaltTomb.length;i++){
+		if(vizsgaltTomb[i].csatlakozas.substr(0,4)==adottEv){
+			adottcsatlakozas++;
+		} 	
+	}
+	return adottcsatlakozas++;
+
+}
+console.log("A 2004ben csatlakozott országok mennyisége " +EuCsatAdv(EuropaiUnio,2004)+" db");
+
 
 //3. Feladat ( basic )
 
@@ -183,5 +199,44 @@ function UtolsoBelepoKiad(UtolsoBelepo){
 }
 
 UtolsoBelepoKiad(EuUtCsat(EuropaiUnio));
+
+//6. Feladat
+
+function EvKivalogato(vizsgaltTomb){
+	let evLista=[];
+	for (let i=0;i<vizsgaltTomb.length;i++){
+		let szerepelE=false;
+		for(let j=0;j<evLista.length;j++){
+			if(evLista[j]==vizsgaltTomb[i].csatlakozas.substring(0,5){
+				szerepelE=true;				
+			}
+		}
+		if(szerepelE==false){
+			evlista.push(vizsgaltTomb[i].csatlakozas.substring(0,4));
+		}
+	}	
+	return evLista;
+}
+
+function EvSzamolo(vizsgaltTomb,evLista){
+	let evMennyiseg=[];
+	for(let i=0;i<evLista.length;i++){
+		evMennyiseg.push(0)
+	}
+	for(let i=0;i<vizsgaltTomb.length;i++){
+		for(let j=0;j<evLista.length;j++){
+			if(evLista[j]==vizsgaltTomb[i].csatlakozas.substring(0,4){
+				evMennyiseg[j]++;
+			}
+		}
+	}
+}
+
+function StatisztikaKiirKONZOL(evLista,evMennyiseg){
+	for(let i=0;i<evLista;i++){
+		console.log(evLista[i]+":" +evMennyiseg[i]);
+	}
+	
+}
 </script>
 
