@@ -1,0 +1,41 @@
+body {
+  background-image: url(fifa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: justify;
+  color: black;
+}
+#adatok {
+  margin: auto 5px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+button {
+  color: white;
+  background-color: #1338be;
+}
+
+.cim {
+  color: white;
+}
+
+table {
+  background-color: darkgrey;
+  color: black;
+}
+
+#tartalom {
+  background-color: white;
+  margin: auto;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 20px;
+}
+.form-control {
+  width: 30%;
+}
